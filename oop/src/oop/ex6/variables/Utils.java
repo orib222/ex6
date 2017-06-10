@@ -2,10 +2,14 @@ package oop.ex6.variables;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class Utils {
+
+    /** patterns **/
+    //TODO
+
 
     public enum VariableType {
         INT("int"),
@@ -36,6 +40,7 @@ public class Utils {
     public static boolean isCompatibleAssignment(VariableType src, VariableType dst){
         return compatabilityAssignmentMap.get(src).contains(dst);
     }
+
 
 
 }

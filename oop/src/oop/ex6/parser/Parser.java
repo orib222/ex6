@@ -1,6 +1,8 @@
 package oop.ex6.parser;
 
 import oop.ex6.main.SjavacException;
+import oop.ex6.scopes.Scope;
+import oop.ex6.scopes.ScopeFactory;
 import oop.ex6.scopes.methods.Method;
 import oop.ex6.scopes.methods.MethodException;
 import oop.ex6.scopes.GlobalScope;
@@ -30,6 +32,7 @@ public class Parser {
     }
 
     private static ArrayList<String> readAllLines(Scanner scanner) {
+        lines = new ArrayList<>();
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (!isEmptyLine(line)) {
@@ -56,7 +59,7 @@ public class Parser {
                 //todo: runs twice. maybe change..
 
                 // check if line is a method
-                Method method = createMethod(line);
+                Method method = ScopeFactory.createMethod(line);
                 if (method != null) {
                     globalScope.setMethod(method);
                 }
@@ -74,18 +77,6 @@ public class Parser {
                 bracketsBalance--;
             }
         }
-    }
-
-    private static boolean isEmptyLine(String line) {
-        //TODO: empty or comment // not code line
-        throw new NotImplementedException();
-    }
-
-
-
-    private static Method createMethod (String line) throws MethodException {
-        // todo: check if it variable and create
-        throw new NotImplementedException();
     }
 
     private static void parseScopes(){

@@ -1,6 +1,7 @@
 package oop.ex6.scopes.methods;
 
 import oop.ex6.scopes.Scope;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Method extends Scope {
 
@@ -15,5 +16,7 @@ public class Method extends Scope {
     public String getName() {
         return this.name;
     }
+
+
 
 }

@@ -33,9 +33,11 @@ public class Sjavac {
         } catch (SjavacException e) {
             System.out.println(ILLEGAL_CODE);
             System.err.println(e.getMessage());
+            return;
         } catch (IOException e) {
             System.out.println(IO_ERROR);
             System.err.println(e.getMessage());
+            return;
         }
         System.out.println(LEGAL_CODE);
     }
