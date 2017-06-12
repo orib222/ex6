@@ -2,18 +2,21 @@ package oop.ex6.scopes;
 
 import oop.ex6.scopes.methods.Method;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class GlobalScope extends Scope {
 
     private static GlobalScope instance = null;
-    private List<Method> methodList;
+    private ArrayList<Method> methodList;
 
 
     private GlobalScope() {
+        super();
         this.startLineNumnber = 1;
         parent = null;
+        methodList = new ArrayList<>();
     }
 
     public static GlobalScope getInstance() {

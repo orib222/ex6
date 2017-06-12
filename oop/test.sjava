@@ -7,7 +7,7 @@ final int b = a;
 // now - a string member
 String s;
 
-int boo(int a, int b, String s) {
+void boo(int a, int b, String s) {
 	if (true) {
 		boo(1,2,"hello");
 		while (false) {

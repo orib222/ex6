@@ -63,7 +63,7 @@ public class Parser {
                 if (method != null) {
                     globalScope.setMethod(method);
                 }
-                else { // if not a variable and not a method
+                if (variable == null && method == null){ // if not a variable and not a method
                     throw new ParsingException("line is not a variable and not a method in global scope");
                 }
 

@@ -3,12 +3,16 @@ package oop.ex6.variables;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Utils {
 
     /** patterns **/
-    //TODO
+    //TODO:
+
+    public static Pattern namePattern = Pattern.compile("[_\\w]+");
 
 
     public enum VariableType {
@@ -42,5 +46,18 @@ public class Utils {
     }
 
 
+    public static boolean checkName(String name){
+        Matcher m = namePattern.matcher(name);
+        return m.matches();
+    }
+
+    public static VariableType checkType(String type){
+        for (VariableType vt: VariableType.values()){
+            if (Objects.equals(type, vt.ToString())){
+                return vt;
+            }
+        }
+        return null;
+    }
 
 }
