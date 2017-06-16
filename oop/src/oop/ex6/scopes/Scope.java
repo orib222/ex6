@@ -12,8 +12,6 @@ public class Scope {
     protected int startLineNumnber;
     protected int endLineNumnber;
 
-    //two varibales with the same name
-
     public Scope(){
         localVariables = new ArrayList<>();
     }

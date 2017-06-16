@@ -1,12 +1,9 @@
 package oop.ex6.parser;
 
 import oop.ex6.main.SjavacException;
-import oop.ex6.scopes.Scope;
 import oop.ex6.scopes.ScopeFactory;
 import oop.ex6.scopes.methods.Method;
-import oop.ex6.scopes.methods.MethodException;
 import oop.ex6.scopes.GlobalScope;
-import oop.ex6.variables.Variable;
 import oop.ex6.variables.*;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -51,7 +48,7 @@ public class Parser {
 
             if (bracketsBalance == 0) {
                 // check if line is a variable
-                Variable variable = VariableFactory.createVariable(line);
+                VariableFactory.parseVariable(line, globalScope);
                 if (variable != null) {
                     globalScope.setLocalVariable(variable);
                 }

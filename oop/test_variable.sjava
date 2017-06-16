@@ -1,0 +1,26 @@
+final int a = 13;
+int a = 13;
+final int a, b = 13;
+final int a = 13, b;
+
+double a, b;
+int i1, i2 = 6;
+char c='Z', f;
+boolean a, b ,c , d = true, e, f = 5;
+String a = "hello" , b = "goodbye";
+
+int number1 = 5;
+int num2 = -3;
+
+double b = 5.21;
+double c = 2;
+
+String s = "hi";
+String a = "i%#";
+
+boolean a = true; // throw same name exception
+boolean b = 5.2; // throw same name exception
+
+char my_cr = 'a';
+char g = '@';
+
